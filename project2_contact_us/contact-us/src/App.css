@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:wght@700&family=Miniver&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Prata&family=Varela+Round&display=swap');
+
+:root{
+    --red: #d01c28;
+    --gray: #2e2e2e;
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins" ,sans-serif;
+}
+
+.main_container{
+  display: flex;
+  height: cal(100vh - 1882px);
+  flex-direction: column;
+}
