@@ -1,0 +1,20 @@
+/* import this css modul file in navigation component */
+/*  access .navigation object value  */
+
+/* are already applying the class to the <nav> element. */
+/* do not use nav */
+
+
+.navigation {
+  display: flex;
+  padding: 0 8px;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul{
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+}
