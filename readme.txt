@@ -62,50 +62,47 @@ its className in react as class keyword is already being used in css file
 
 inline css using style attribute use double curly brace and put values in quotations--> style={{ width : '45px', height: '25px'}}
 
-in Button functional component the onClick attribute will not work, it must be accepted in props using spread operator
 
- <form onSubmit={onSubmit}> this onSubmit reloads the lpage each time we click submit button, and brings us to new url, we need to prevent this default behaviour, use 
-  const onSubmit = (event) => {
-    event.preventDeafult();
-    console.log(event);
-    
-  }, preventDefault will let us see values of event at console
+project 2: creating css modules , there modules are desiged for providing styling tos pecific components , we will provide className = {styles.class_name} , where impor styles from module.css, class name must not have dash -. 
 
-  ---> // save data 
-  let name;
-  let email;
-  let text;
+We can use the same componens multiple time using props, for example two buttons are almost similarbut their contecttext changes then we will the different contents throgh 
+<Button text = "chat" /> then it will automatically pass props , accept props argument and use like -> {props.text}
 
-  // on submit form even handler
-  const onSubmit = (event) => {
-    event.preventDefault();
-
-   name =  event.target[0].value
-    email = event.target[1].value
-    text = event.target[2].value
-    
-  }, these variable wont be accessible inside JSX after taking values from form, to solve this, we use useState hook
-  use const [name, setName] = useState("Anshu"); anshu is default  value
-
-  use state will allow us to re render the component again when the set functionis called or stte variable value is updated
-
-  normal variable will not re render the element, but use state makes it possible it return the state variable and set function, we can set the deault value
-  and these variables
+react incons install it -> npm i react-icons and use -> import { FaPhoneAlt } from "react-icons/fa";, Fa means  /fa folder
 
 
-  project 3: use style components, run--> npm install styled-components
-  and in package.json add -> "resolutions": {
-    "styled-components": "^5"
-  }
-import it using --> import styled from "styled-components"
- white-space: nowrap; --> text will not come to the next line
 
- put the js code inside {} in jsx code
 
- when usig onclick and passing a function with argument then use anonymous func --> onClick={() =>roleDice(1,2)}
 
- we heard props helps pass data from parent to child componentsthe number we select from number selector must be compared with the random number generated
- in role dice components, both number selector and role dice have GamePlay  parent declare state varriables there,
- pass them <NumberSelector 
-      selectedNumber={selectedNumber}
-      setSelectedNumber={setSelectedNumber} />, nd accept them in NumberSelector same do for currentState in role dice
+project 5:
+Using tailwing go to the tailwing css website then choose vite then run commands :
+npm create vite@latest my-project
+cd my-project
+npm run dev
+npm install
+npm install tailwindcss @tailwindcss/vite
+
+perform all the setup mentioned in its site
+also search there tailwind prettier extension
+using this -> npm install -D prettier prettier-plugin-tailwindcss
+
+tailwind css reduces code writing time we can all the css in className attribute ---> <div className='flex bg-red-500 justify-items-stretch'>App</div>
+
+we will use firebase , go to the firebase website sign in with your google acc and go to console, then new project name it, then disable google analytics
+then continue start the project, then after starting </> click this icon, and register with the same project name, for thid click
+on Add App </> web app, after  this you will get npm install command, and credentials. run the command
+create the config inside src folder , inside this create firebase.js file and paste the credentials code inside itand export the app in the end 
+
+Now create database inside firebase , we will create firestore database for this in the left panel go to the database & storage then choose firework 
+then  click create database, select standard edition, then kkepp DB id as defaultand choose nearby location asia-south1 - mumbai
+then in configure, choose start in Test Mode, click create 
+
+now firestore is a nosql database so create a collection --> which means a table
+then Document ID click AutoId, add feild name String data type enter value, same for email
+then import in firebase.js 
+
+WE CAN see the browser inside vs code, do cntrol + shift + P ,search for simple browser then paste the url 
+then split it right
+
+tailwind has shorten the syntax of css umust study and observe
+you can hover on the properti to see full css and values
