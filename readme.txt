@@ -106,3 +106,7 @@ then split it right
 
 tailwind has shorten the syntax of css umust study and observe
 you can hover on the properti to see full css and values
+
+to handle form use external library called formik npm i formik
+
+if wo functions isOpen an isClose are being used at multiple places then use custom hooks

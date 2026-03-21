@@ -8,10 +8,13 @@ import { HiOutlineUserCircle } from 'react-icons/hi'
 import { IoMdTrash } from 'react-icons/io';
 import { RiEditCircleLine } from "react-icons/ri"
 import ContactCard from './components/ContactCard';
+import AddUpdateContact from './components/AddUpdateContact';
+import useDisclouse from './hooks/useDisclouse.js'
 
 const App = () => {
 
   const [contacts, setContacts] = useState([]) // empty array
+  const { onClose, onOpen, isOpen } = useDisclouse()
 
   useEffect(() => {
     const getContacts = async () => {
@@ -50,7 +53,7 @@ const App = () => {
       </div>
        {/*  plus icon */}
       
-          <AiFillPlusCircle className='cursor-pointer text-5xl text-white ' />
+          <AiFillPlusCircle onClick = {onOpen} className='cursor-pointer text-5xl text-white ' />
   
      </div>
 
@@ -60,6 +63,8 @@ const App = () => {
              <ContactCard key = {contact.id} contact = {contact} />
            )
       )}</div>
+
+      <AddUpdateContact onClose={ onClose} isOpen={ isOpen }/>
     </div>
   )
 }
