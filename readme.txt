@@ -110,3 +110,11 @@ you can hover on the properti to see full css and values
 to handle form use external library called formik npm i formik
 
 if wo functions isOpen an isClose are being used at multiple places then use custom hooks
+
+
+project6 :
+delete eslint.config.js file
+
+now set up chakra css, go to chakra website and copy the install command
+and pack the main component with ChakraProvider tag
+import "@fontsource/ubuntu";  install this font from typeface npm 
