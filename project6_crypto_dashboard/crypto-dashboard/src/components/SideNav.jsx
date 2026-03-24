@@ -31,10 +31,18 @@ const SideNav = () => {
   ]
 
   return (
-    <Stack justify = "space-between" boxShadow= "lg" maxW = "16rem" h= "100vh"
+    <Stack justify = "space-between" boxShadow= {{
+      base: "none",
+      lg: "lg"
+    }} w = {{
+      base: "full",
+      lg: "16rem"
+    }} h= "100vh"
     _hover = {{
               bg : " #F3F3F7",         
-             }}>
+             }} 
+             bg= "white"
+      >
      <Box>
          {
         navLinks.map((nav) => {

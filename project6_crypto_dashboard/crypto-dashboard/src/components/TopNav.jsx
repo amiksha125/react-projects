@@ -1,15 +1,19 @@
 import { Container, Heading, Flex, Menu, MenuButton, MenuList, MenuItem, Button, HStack , Box, Icon} from '@chakra-ui/react'
 import React from 'react'
 import { FaCircleUser } from "react-icons/fa6";
+import { FaBars } from 'react-icons/fa'
 
-const TopNav = () => {
+const TopNav = ( {title, onOpen } ) => {
   return (
-    <Box     boxShadow="xl">
+    <Box px= "4" bg= "white">
       <HStack maxW = "1280px" mx= "auto"
-   h = "16" justify= "space-between" px= "32">
-      
+   h = "16" justify= "space-between">
+      <Icon as= {FaBars} onClick={onOpen}
+      display={{base: "block",
+          lg: "none"
+      }}/>
 
-        <Heading fontStyle = "medium"fontSize= "28px">Dashboard</Heading>
+        <Heading fontStyle = "medium"fontSize= "28px"> {title } </Heading>
     
 
       <Menu>
