@@ -1,149 +1,115 @@
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
-export const theme = extendTheme({
+export const theme = extendTheme(
+{
   fonts: {
-     heading: "Poppins, sans-serif",
-     body: "Poppins, sans-serif"
+    heading: "Poppins, sans-serif",
+    body: "Poppins, sans-serif",
   },
 
   colors: {
-     purple: {
-        500: "#5F00D9",
-      },
+    purple: {
+      500: "#5F00D9",
+    },
+
     p: {
-       purple: "#5F00D9",
-       black : "#171717"
+      purple: "#5F00D9",
+      black: "#171717",
     },
+
     black: {
-        5: "#F3F3F7",
-        10: "#EEEEF4",
-        20: "#D8DDE2",
-        40: "#BABAC4",
-        60: "#797E82",
-        80: "#535D66"
-    }
-  }, 
+      5: "#F3F3F7",
+      10: "#EEEEF4",
+      20: "#D8DDE2",
+      40: "#BABAC4",
+      60: "#797E82",
+      80: "#535D66",
+    },
+  },
 
-   textStyles: {
-      h1: {
-        fontSize: {
-          base: "30px",
-          md: "32px",
-        },
-        color: "p.black",
-        lineHeight: {
-          base: "34px",
-          md: "36px",
-        },
-      },
-      h2: {
-        fontSize: {
-          base: "24px",
-          md: "28px",
-        },
-        color: "p.black",
-        lineHeight: { base: "28px", md: "32px" },
-      },
+  textStyles: {
+    h1: {
+      fontSize: { base: "30px", md: "32px" },
+      color: "p.black",
+      lineHeight: { base: "34px", md: "36px" },
+    },
 
-      h3: {
-        fontSize: {
-          base: "22px",
-          md: "24px",
-          xl: "32px",
-        },
-        color: "p.black",
+    h2: {
+      fontSize: { base: "24px", md: "28px" },
+      color: "p.black",
+      lineHeight: { base: "28px", md: "32px" },
+    },
 
-        lineHeight: { base: "26px", md: "28px", xl: "36px" },
-      },
+    h3: {
+      fontSize: { base: "22px", md: "24px", xl: "32px" },
+      color: "p.black",
+      lineHeight: { base: "26px", md: "28px", xl: "36px" },
+    },
 
-      h4: {
-        fontSize: {
-          base: "20px",
-          md: "22px",
-        },
-        color: "p.black",
+    h4: {
+      fontSize: { base: "20px", md: "22px" },
+      color: "p.black",
+      lineHeight: { base: "24px", md: "26px" },
+    },
 
-        lineHeight: { base: "24px", md: "26px" },
-      },
-      h5: {
-        fontSize: {
-          base: "18px",
-          md: "20px",
-        },
-        color: "p.black",
+    h5: {
+      fontSize: { base: "18px", md: "20px" },
+      color: "p.black",
+      lineHeight: { base: "22px", md: "24px" },
+    },
 
-        lineHeight: { base: "22px", md: "24px" },
-      },
-      h6: {
-        fontSize: {
-          base: "16px",
-          md: "18px",
-        },
-        color: "p.black",
+    h6: {
+      fontSize: { base: "16px", md: "18px" },
+      color: "p.black",
+      lineHeight: { base: "20px", md: "22px" },
+    },
 
-        lineHeight: { base: "20px", md: "22px" },
-      },
-      p2: {
-        fontSize: {
-          base: "14px",
-        },
-        color: "p.black",
-        lineHeight: { base: "18px" },
-      },
-      p3: {
-        fontSize: {
-          base: "12px",
-        },
-        color: "p.black",
-        lineHeight: { base: "14px" },
+    p2: {
+      fontSize: { base: "14px" },
+      color: "p.black",
+      lineHeight: { base: "18px" },
+    },
+
+    p3: {
+      fontSize: { base: "12px" },
+      color: "p.black",
+      lineHeight: { base: "14px" },
+    },
+  },
+
+  fontSizes: {
+    xs: "12px",
+    sm: "14px",
+    base: "16px",
+    lg: "18px",
+    xl: "20px",
+    "2xl": "22px",
+    "3xl": "24px",
+    "4xl": "30px",
+  },
+
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: "bold",
+        borderRadius: "10px",
       },
     },
 
-   fontSizes: {
-  xs: "12px",
-  sm: "14px",
-  base: "16px",
-  lg: "18px",
-  xl: "20px",
-  "2xl": "22px",
-  "3xl": "24px",
-  "4xl": "30px",
-},
+    FormLabel: {
+      baseStyle: {
+        fontSize: "sm",
+      },
+    },
 
- components: {
-      Button: {
-        baseStyle: {
-          fontWeight: "bold",
-          borderRadius: "10px",
-        },
-      },
-      FormLabel: {
-        baseStyle: {
-          fontSize: "sm",
-        },
-      },
-      Input: {
-        variants: {
-          outline: {
-            field: {
-              h: "38px",
-              borderRadius: "8px",
-              fontSize: "sm",
-              pb: "0",
-              _focus: {
-                boxShadow: "0 0 0 1px #5F00D9",
-              },
-            },
-          },
-        },
-      },
-      Textarea: {
-        variants: {
-          outline: {
+    Input: {
+      variants: {
+        outline: {
+          field: {
             h: "38px",
             borderRadius: "8px",
             fontSize: "sm",
-
+            pb: "0",
             _focus: {
               boxShadow: "0 0 0 1px #5F00D9",
             },
@@ -151,16 +117,28 @@ export const theme = extendTheme({
         },
       },
     },
+
+    Textarea: {
+      variants: {
+        outline: {
+          h: "38px",
+          borderRadius: "8px",
+          fontSize: "sm",
+          _focus: {
+            boxShadow: "0 0 0 1px #5F00D9",
+          },
+        },
+      },
+    },
   },
 
-//   styles: {
-//     global: {
-//       body: {
-//         bg: "#F3F3F7",
-//       },
-//     },
-//   },
- 
-// },
-   withDefaultColorScheme( { colorScheme : "purple"})
+  styles: {
+    global: {
+      body: {
+        bg: "#F3F3F7",
+      },
+    },
+  },
+},
+withDefaultColorScheme({ colorScheme: "purple" })
 );
