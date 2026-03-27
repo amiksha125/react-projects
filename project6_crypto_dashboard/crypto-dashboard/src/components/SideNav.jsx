@@ -14,6 +14,8 @@ import { Box, HStack, Stack, Text, Icon } from "@chakra-ui/react";
 import { RxDashboard } from 'react-icons/rx'
 import { BsArrowDownUp } from 'react-icons/bs'
 import { BiSupport } from 'react-icons/bi'
+import  { Link } from 'react-router-dom'
+
 
 const SideNav = () => {
   
@@ -47,8 +49,8 @@ const SideNav = () => {
          {
         navLinks.map((nav) => {
           return (
+            <Link to={nav.link}    key={nav.text}>
             <HStack mx = "12px" mt= "20px" 
-            key={nav.text}
              
              color= "#797E82"
              _hover= {{
@@ -58,13 +60,15 @@ const SideNav = () => {
               <Icon as={nav.icon} />
               <Text fontSize= "14px" fontWeight="medium" >{nav.text}</Text>
             </HStack>
+            </Link>
           )
         })
       }
      </Box>
 
       <Box mb= "20px">
-        <HStack mx = "12px" mt= "20px" 
+        <Link to= "/support" >
+            <HStack mx = "12px" mt= "20px" 
              
              color= "#797E82"
              _hover= {{
@@ -73,7 +77,8 @@ const SideNav = () => {
              borderRadius= "10px">
               <Icon as={BiSupport} />
               <Text fontSize= "14px" fontWeight="medium" >Support</Text>
-      </HStack>
+            </HStack>
+        </Link>
       </Box>
     </Stack>
   )
