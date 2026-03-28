@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Card, Flex, Button , Icon, Tabs, Tab, TabList, Tag, TabPanel, TabPanels,  Input,
   InputGroup, HStack,
   InputLeftElement,} from "@chakra-ui/react"
@@ -28,7 +28,7 @@ const tabs = [
 ]
 const Transaction = () => {
   return (
-    <DashboardLayout>
+    <DashboardLayout title= "Transactions">
       <Flex justify= "end" mt="6" mb="3">
         <Button leftIcon={<Icon as={AiOutlineDownload} />}>Export CSV</Button>
       </Flex>

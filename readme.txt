@@ -118,3 +118,18 @@ delete eslint.config.js file
 now set up chakra css, go to chakra website and copy the install command
 and pack the main component with ChakraProvider tag
 import "@fontsource/ubuntu";  install this font from typeface npm 
+
+to create multiple pages in react use react router
+npm i react-router-dom
+
+setup inside main.jsx or app.jsx add this ->
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+{
+path: "/",
+element: <div>Hello world!</div>,
+},
+]);
+
+and inside component  function add -> <RouterProvider router={router} />
